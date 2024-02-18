@@ -96,7 +96,7 @@ type VoteInputProps = {
 function VoteInput({ register, index, remove }: VoteInputProps) {
   return (
     <Group>
-      <Input type="number" {...register(`votes.${index}.name`)} placeholder="Nama Partai" />
+      <Input type="text" {...register(`votes.${index}.name`)} placeholder="Nama Partai" />
       <Input type="number" {...register(`votes.${index}.count`)} placeholder="Jumlah Suara" />
       <Button onClick={() => remove(index)} size="sm" color="red">Hapus</Button>
     </Group>
